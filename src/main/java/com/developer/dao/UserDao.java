@@ -4,18 +4,16 @@ import java.sql.Connection;
 
 import com.developer.models.User;
 import com.revature.connection.ConnectionFactory;
+import com.revature.objectMapper.Database;
 
 public class UserDao {
+	Database db = new Database();
 	public int insert(User user) {
-		ConnectionFactory cf = ConnectionFactory.getInstance();
-		Connection conn = null;
-		try {
-			conn = cf.getConnection();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		return -1; // return the auto-generate primary key
+		return db.insert(user);
+	}
+	
+	// Update this to boolean later
+	public void update(Object obj) {
+		db.update(obj);
 	}
 }

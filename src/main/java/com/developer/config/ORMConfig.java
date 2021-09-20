@@ -10,6 +10,7 @@ public class ORMConfig {
 		Configuration cfg = new Configuration();
 		cfg.addAnnotatedClass(User.class);
 		cfg.addAnnotatedClass(Vehicle.class);
+		
 		cfg.init();
 	}
 }
