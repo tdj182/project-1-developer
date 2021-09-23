@@ -9,7 +9,7 @@ import com.revature.annotations.Id;
 @Entity(tableName="user_table")
 public class User {
 
-	@Id(columnName="user_id")
+	@Id(columnName="user_id", isSerial = true)
 	private int id;
 	
 	@Column(columnName="username")

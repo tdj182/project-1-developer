@@ -7,7 +7,7 @@ import com.revature.annotations.Id;
 @Entity(tableName="vehicle_table")
 public class Vehicle {
 
-	@Id(columnName="id")
+	@Id(columnName="id", isSerial = true)
 	private int id;
 	
 	@Column(columnName="brand")

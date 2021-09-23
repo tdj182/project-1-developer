@@ -6,7 +6,7 @@ import com.revature.util.Configuration;
 
 public class ORMConfig {
 
-	public static void config() {
+	public static void config() throws NoSuchFieldException, SecurityException {
 		Configuration cfg = new Configuration();
 		cfg.addAnnotatedClass(User.class);
 		cfg.addAnnotatedClass(Vehicle.class);

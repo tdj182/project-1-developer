@@ -10,7 +10,7 @@ import com.revature.connection.ConnectionFactory;
 
 public class DevDriver {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws NoSuchFieldException, SecurityException {
 
 		// Set all configurations 
 		ORMConfig.config();
