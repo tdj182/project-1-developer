@@ -5,6 +5,8 @@ import java.util.Objects;
 import com.revature.annotations.Column;
 import com.revature.annotations.Entity;
 import com.revature.annotations.Id;
+import com.revature.annotations.Nullable;
+import com.revature.annotations.Unique;
 
 @Entity(tableName="user_table")
 public class User {
@@ -13,17 +15,24 @@ public class User {
 	private int id;
 	
 	@Column(columnName="username")
+	@Nullable(isNullable = false)
+	@Unique(isUnique = true)
 	private String username;
 	
 	@Column(columnName="password")
+	@Nullable(isNullable = false)
 	private String password;
 	
 	@Column(columnName="age")
+	@Nullable(isNullable = true) // THIS IS JUST HERE TO TEST IF TRUE IS PASSED, THEN NOTHING WILL CHANGE
 	private int age;
 	
 	@Column(columnName="weight")
 	private double weight;
 
+	public User() {
+		super();
+	}
 	
 	public User(String username, String password, int age, double weight) {
 		super();
