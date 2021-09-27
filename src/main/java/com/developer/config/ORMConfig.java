@@ -2,7 +2,6 @@ package com.developer.config;
 
 import com.developer.models.Account;
 import com.developer.models.User;
-import com.developer.models.Vehicle;
 import com.revature.util.Configuration;
 
 public class ORMConfig {
