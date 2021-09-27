@@ -22,8 +22,8 @@ public class DevDriver {
 		ORMConfig.config();
 		
 		runSetup();
-		runApp();
-//		runCustomSql();
+//		runApp();
+		runCustomSql();
 	}
 	
 	public static void runApp() {
@@ -284,7 +284,10 @@ public class DevDriver {
 	}
 	
 	public static void runCustomSql() {
+
+		Cataclysm cc = new Cataclysm();
 		
+		System.out.println(cc.customSelect(User.class, "SELECT username, password FROM user_table WHERE age = 25"));
 	}
 	
 }
