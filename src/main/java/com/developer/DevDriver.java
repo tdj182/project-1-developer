@@ -21,9 +21,9 @@ public class DevDriver {
 		// Set all configurations 
 		ORMConfig.config();
 		
-		runTests();
+		runSetup();
 		runApp();
-		runCustomSql();
+//		runCustomSql();
 	}
 	
 	public static void runApp() {
@@ -240,29 +240,8 @@ public class DevDriver {
 		
 	}
 	
-	public static void listAllEntities() {
-//		String someClass = scan.next();
-//		Class c2 = null;
-////		c2 = someClass.getClass();
-//		try {
-//			c2 = Class.forName("com.developer.models." + someClass);
-//		} catch (ClassNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		
-//		System.out.println(c2);
-//		List<User> users = cc.selectAllFromTable(c2);
-//
-//		System.out.println("ALL USERS FOUND");
-//		System.out.println("================");
-//		for (User u: users) {
-//			System.out.println(u.getUsername());
-//		}
-	}
 	
-	
-	public static void runTests() {
+	public static void runSetup() {
 		
 
 		Cataclysm cc = new Cataclysm();
